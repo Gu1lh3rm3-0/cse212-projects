@@ -8,12 +8,18 @@ public static class Arrays
     /// <returns>array of doubles that are the multiples of the supplied number</returns>
     public static double[] MultiplesOf(double number, int length)
     {
-        // TODO Problem 1 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        // Set the variables
+        // Create a "for" interaction so the code will work until reaches the length
+        // Inside the "for" create a code to multiply the number in the variable "number"
+        // Return the "multiples" list
+        double[] multiples = new double[length];
 
-        return []; // replace this return statement with your own
+        for (int i = 0; i < length; i++)
+        {
+            multiples[i] = number * (i + 1);
+        }
+
+            return multiples;
     }
 
     /// <summary>
@@ -25,9 +31,21 @@ public static class Arrays
     /// </summary>
     public static void RotateListRight(List<int> data, int amount)
     {
-        // TODO Problem 2 Start
-        // Remember: Using comments in your program, write down your process for solving this problem
-        // step by step before you write the code. The plan should be clear enough that it could
-        // be implemented by another person.
+        // Use the GetRange method to choose the numbers in the list
+        // Use a foreach to remove the numbers in the list 
+        // Use a foreach to addthe numbers in the list again
+        //This will make the list take the choosed numbers and send to the final of the list
+        List<int> dataRange = data.GetRange(0, amount);
+
+        foreach (int dataNumber in dataRange)
+        {
+            data.Remove(dataNumber);
+        }
+
+        foreach (int dataNumbers in dataRange)
+        {
+            data.Add(dataNumbers);
+        }
+
     }
 }
