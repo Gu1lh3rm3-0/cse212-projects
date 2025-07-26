@@ -2,6 +2,7 @@
 {
     private List<PriorityItem> _queue = new();
 
+
     /// <summary>
     /// Add a new value to the queue with an associated priority.  The
     /// node is always added to the back of the queue regardless of 
@@ -19,7 +20,7 @@
     {
         if (_queue.Count == 0) // Verify the queue is not empty
         {
-            throw new InvalidOperationException("The queue is empty.");
+            throw new InvalidOperationException("No one in the queue.");
         }
 
         // Find the index of the item with the highest priority to remove
